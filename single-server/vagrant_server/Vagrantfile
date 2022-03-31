@@ -1,0 +1,11 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+IP="172.28.128.3"
+
+# Esempio Vagrantfile 
+Vagrant.configure("2") do |config|
+  config.vm.box = "hashicorp/bionic64"
+  config.vm.network "private_network", ip: IP
+  config.ssh.insert_key = false
+end
